@@ -1,5 +1,6 @@
 const test = QUnit.test;
-import checkSeason from '../src/result/calculation/check-season.js';
+import descriptorCheck from '../src/result/calculation/check-descriptor.js';
+
 let scorecard = null;
 QUnit.testStart(function() {
     scorecard = { sophia: 0, dorothy: 0, rose: 0, blanche: 0 };
@@ -7,31 +8,30 @@ QUnit.testStart(function() {
 
 
 
-test('add one to sophia if "winter" is checked', function(assert) {
+test('add one to sophia if "old" is checked', function(assert) {
     const expected = { sophia: 1, dorothy: 0, rose: 0, blanche: 0 };
-    const result = checkSeason('winter', scorecard);
+    const result = descriptorCheck('old', scorecard);
 
     assert.deepEqual(result, expected);
-
 });
-test('add one to dorothy if "autumn" is checked', function(assert) {
+
+test('add one to dorothy if "masculine" is checked', function(assert) {
     const expected = { sophia: 0, dorothy: 1, rose: 0, blanche: 0 };
-    const result = checkSeason('autumn', scorecard);
+    const result = descriptorCheck('masculine', scorecard);
 
     assert.deepEqual(result, expected);
-
 });
-test('add one to rose if "spring" is checked', function(assert) {
+
+test('add one to rose if "dumb" is checked', function(assert) {
     const expected = { sophia: 0, dorothy: 0, rose: 1, blanche: 0 };
-    const result = checkSeason('spring', scorecard);
+    const result = descriptorCheck('dumb', scorecard);
 
     assert.deepEqual(result, expected);
-
 });
-test('add one to blanche if "summer" is checked', function(assert) {
+
+test('add one to blanche if "sexy" is checked', function(assert) {
     const expected = { sophia: 0, dorothy: 0, rose: 0, blanche: 1 };
-    const result = checkSeason('summer', scorecard);
+    const result = descriptorCheck('sexy', scorecard);
 
     assert.deepEqual(result, expected);
-
 });

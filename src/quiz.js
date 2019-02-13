@@ -17,6 +17,4 @@ formNode.addEventListener('submit', function(event) {
 
     window.location = 'results.html';
 
-    console.log(json);
-
 });

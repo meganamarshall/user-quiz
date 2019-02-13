@@ -5,22 +5,20 @@ function rateScorecard(scorecard) {
     const blanche = scorecard.blanche;
 
     if(sophia > dorothy && sophia > rose && sophia > blanche) {
-        return "Sophia";
+        return 'Sophia';
     }
     if(dorothy > sophia && dorothy > rose && dorothy > blanche) {
-        return "Dorothy";
+        return 'Dorothy';
     }
     if(rose > sophia && rose > dorothy && rose > blanche) {
-        return "Rose";
+        return 'Rose';
     }
     if(blanche > sophia && blanche > dorothy && blanche > rose) {
-        return "Blanche";
+        return 'Blanche';
     }
     else {
-        return "Stanley";
+        return 'Stanley';
     }
-
-    return result;
 }
 
 export default rateScorecard;

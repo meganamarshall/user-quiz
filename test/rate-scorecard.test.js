@@ -1,9 +1,5 @@
 const test = QUnit.test;
 import rateScorecard from '../src/result/calculation/rate-scorecard.js';
-let scorecard = null;   
-QUnit.testStart(function() {
-    scorecard = { sophia: 0, dorothy: 0, rose: 0, blanche: 0 };
-});
 
 test('if sophia total is highest, return "Sophia"', function(assert) {
     const scorecard = { sophia: 2, dorothy: 0, rose: 1, blanche: 0 };

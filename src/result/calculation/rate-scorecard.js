@@ -16,6 +16,9 @@ function rateScorecard(scorecard) {
     if(blanche > sophia && blanche > dorothy && blanche > rose) {
         return "Blanche";
     }
+    else {
+        return "Stanley";
+    }
 
     return result;
 }
